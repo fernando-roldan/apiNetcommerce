@@ -45,7 +45,7 @@ class TaskController extends Controller
             'expired_at' => null,
         ]);
         
-        $formattedResponse = [
+        $response = [
             'id' => $task->id,
             'name' => $task->name,
             'description' => $task->description,
@@ -56,6 +56,6 @@ class TaskController extends Controller
             ]
         ];
 
-        return response()->json($formattedResponse, 201);
+        return response()->json($response, 201);
     }
 }
